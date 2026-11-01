@@ -1,0 +1,389 @@
+@import "tailwindcss";
+
+:root {
+  --color-slate-950: #020617;
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748b;
+  --color-slate-400: #94a3b8;
+  --color-slate-300: #cbd5e1;
+  --color-slate-200: #e2e8f0;
+  --color-slate-100: #f1f5f9;
+  --color-emerald-950: #022c22;
+  --color-emerald-900: #064e3b;
+  --color-emerald-800: #065f46;
+  --color-emerald-700: #047857;
+  --color-emerald-600: #059669;
+  --color-emerald-500: #10b981;
+  --color-emerald-400: #34d399;
+  --color-emerald-300: #6ee7b7;
+  --color-emerald-200: #a7f3d0;
+  --color-amber-950: #451a03;
+  --color-amber-800: #92400e;
+  --color-amber-500: #f59e0b;
+  --color-amber-400: #fbbf24;
+  --color-amber-300: #fcd34d;
+  --color-amber-200: #fde68a;
+  --color-sky-950: #082f49;
+  --color-sky-500: #0ea5e9;
+  --color-sky-400: #38bdf8;
+  --color-sky-300: #7dd3fc;
+  --color-red-950: #450a0a;
+  --color-red-900: #7f1d1d;
+  --color-red-800: #991b1b;
+  --color-red-600: #dc2626;
+  --color-red-500: #ef4444;
+  --color-red-400: #f87171;
+  --color-red-300: #fca5a5;
+  --color-red-200: #fecaca;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #020617;
+  color: #f8fafc;
+  -webkit-text-size-adjust: 100%;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.wb-app-shell {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  background-color: #020617;
+  color: #f8fafc;
+}
+
+.wb-container {
+  width: 100%;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .wb-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.wb-card {
+  background-color: #0f172a;
+  border: 1.5px solid #1e293b;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.65);
+}
+
+.wb-balance-card {
+  background: linear-gradient(180deg, #0f172a 0%, #091020 100%);
+  border-radius: 1.25rem;
+  padding: 1.35rem 1.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 32px -6px rgba(0, 0, 0, 0.7), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+}
+
+.wb-balance-card-emerald {
+  border: 2px solid #10b981;
+  box-shadow: 0 12px 28px -6px rgba(16, 185, 129, 0.22), inset 0 1px 0 0 rgba(52, 211, 153, 0.2);
+}
+
+.wb-balance-card-amber {
+  border: 2px solid #fbbf24;
+  box-shadow: 0 12px 28px -6px rgba(251, 191, 36, 0.2), inset 0 1px 0 0 rgba(251, 191, 36, 0.2);
+}
+
+.wb-balance-card-sky {
+  border: 2px solid #38bdf8;
+  box-shadow: 0 12px 28px -6px rgba(56, 189, 248, 0.2), inset 0 1px 0 0 rgba(56, 189, 248, 0.2);
+}
+
+.wb-bingo-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.25rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .wb-bingo-grid-5 {
+    gap: 0.5rem;
+  }
+}
+
+.wb-cartela-panel {
+  height: auto;
+  align-self: flex-start;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wb-cartela-5x5-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.3rem;
+  width: 100%;
+  height: auto;
+  align-self: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .wb-cartela-5x5-grid {
+    gap: 0.45rem;
+  }
+}
+
+.wb-cartela-cell {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.wb-card-grid-120 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .wb-card-grid-120 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 0.625rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .wb-card-grid-120 {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+}
+
+.wb-deposit-form {
+  width: 100%;
+  max-width: 38rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #0f172a;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.72);
+}
+
+.wb-upload-box {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background-color: #020617;
+  border: 2px dashed #fbbf24;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.wb-file-input {
+  width: 100%;
+  max-width: 22rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  color: #e2e8f0;
+  font-size: 0.875rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.wb-file-input::file-selector-button {
+  margin-right: 0.75rem;
+  padding: 0.55rem 1rem;
+  border-radius: 0.625rem;
+  border: none;
+  background-color: #fbbf24;
+  color: #020617;
+  font-weight: 800;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.wb-file-input::file-selector-button:hover {
+  background-color: #fcd34d;
+}
+
+.wb-nav-bar {
+  width: 100%;
+  max-width: 68rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #1e293b;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+@media (min-width: 640px) {
+  .wb-nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wb-nav-bar {
+    gap: 1.35rem;
+  }
+}
+
+.wb-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  min-height: 2.85rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 0.9rem;
+  background-color: #0f172a;
+  border: 1.5px solid #334155;
+  color: #e2e8f0;
+  font-weight: 800;
+  font-size: 0.9rem;
+  line-height: 1.25;
+  text-align: center;
+  transition: all 0.18s ease;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.wb-nav-btn:hover {
+  background-color: #1e293b;
+  border-color: #64748b;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.wb-nav-btn-active {
+  background: linear-gradient(180deg, rgba(6, 78, 59, 0.9) 0%, rgba(2, 44, 34, 0.95) 100%);
+  border: 2px solid #10b981;
+  color: #6ee7b7;
+  box-shadow: 0 6px 20px -4px rgba(16, 185, 129, 0.35), inset 0 1px 0 0 rgba(52, 211, 153, 0.25);
+}
+
+.wb-bottom-nav {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  padding: 0.45rem 0.6rem;
+  height: 4.5rem;
+  align-items: center;
+}
+
+.wb-bottom-nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  height: 100%;
+  padding: 0.35rem 0.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #1e293b;
+  background-color: #0f172a;
+  color: #cbd5e1;
+  font-weight: 800;
+  font-size: 0.72rem;
+  line-height: 1.15;
+  text-align: center;
+  transition: all 0.15s ease;
+}
+
+.wb-bottom-nav-btn-active {
+  background-color: rgba(6, 78, 59, 0.85);
+  border: 1.5px solid #10b981;
+  color: #6ee7b7;
+  box-shadow: 0 4px 12px -2px rgba(16, 185, 129, 0.3);
+}
+
+.ui-scale-normal {
+  font-size: 100%;
+}
+
+.ui-scale-large {
+  font-size: 104%;
+}
+
+.ui-scale-xlarge {
+  font-size: 108%;
+}
+
+/* Completely hide Next.js "N" indicator / badge / dev portal in all views */
+nextjs-portal,
+#__next-build-watcher,
+[data-nextjs-toast],
+[data-nextjs-dev-tools-button],
+[data-next-badge-root],
+[data-next-badge] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+
