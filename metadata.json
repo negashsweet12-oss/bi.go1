@@ -1,0 +1,6 @@
+{
+  "name": "Winner Bingo — Provably Fair 75-Ball Multiplayer Bingo",
+  "description": "Winner Bingo: Real-time multiplayer 75-ball Bingo betting platform with provably fair HMAC-SHA256 draws, integer santim append-only ledger, Amharic and English mobile-first UI, and Responsible Gaming protections.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
